@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z "$1" ];then
+        echo -e "\n\tTo run bash in docker:\n"
+        echo -e "Usage:\e[0m \e[92mrunDocker [docker image name]\e[0m \t\t\e[96m* Name is case sensitive\e[0m"
+        echo -e "\n\e[33mHere is the list with the running containers on your system:\e[0m"
+        printf "\e[4m\t%-30s\t%-50s\n\e[0m" 'Name To Use' 'ID of docker Container'
+        docker ps | awk '{printf "\t%-30s\t%-50s\n",$NF,$2}'|grep -v "NAMES"
+        exit 1
+fi
+
+docker exec -ti $1 /bin/bash
