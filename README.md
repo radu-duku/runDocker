@@ -11,9 +11,10 @@ Usage: runDocker [docker image name] 		* Name is case sensitive
 
 Here is the list with the running containers on your system:
 	Name To Use                   	ID of docker Container                            
+_______________________________________________________________________________
 	SomeContainerName              	docker/container:latest
 ```
-
+___
 # Make it run like any other command in terminal..
 **1** *Save the contetnt of the **runDocker** file, make an alias to:*
 
